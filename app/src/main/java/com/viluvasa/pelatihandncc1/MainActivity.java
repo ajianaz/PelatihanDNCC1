@@ -35,6 +35,7 @@ import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStates;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.viluvasa.pelatihandncc1.activity.MapsActivity;
+import com.viluvasa.pelatihandncc1.fcm.MyFirebaseInstanceIDService;
 import com.viluvasa.pelatihandncc1.helper.UserHelper;
 
 public class MainActivity extends AppCompatActivity implements LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
@@ -69,6 +70,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
 
         checkPermissions();
         cekGPSandProvider();
+
+        MyFirebaseInstanceIDService mfs = new MyFirebaseInstanceIDService();
+        mfs.getTokenID();
 
     }
 

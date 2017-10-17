@@ -7,4 +7,6 @@ package com.viluvasa.pelatihandncc1.helper;
 public class UserHelper {
     public static String GPS_Loc_Lat;
     public static String GPS_Loc_Lang;
+
+    public static String token_FCM;
 }
